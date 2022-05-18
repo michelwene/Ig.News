@@ -5,8 +5,8 @@ import { RichText } from "prismic-dom";
 import { getPrismicCliente } from "../../../services/prismic";
 import styles from "../post.module.scss";
 
-import Link from "next-link";
 import { useEffect } from "react";
+import Link from "next/link";
 
 interface PostPreviewProps {
   post: {
@@ -18,8 +18,6 @@ interface PostPreviewProps {
 }
 
 export default function PostPreview({ post }: PostPreviewProps) {
-  const [session] = useSession();
-
   useEffect(() => {}, []);
 
   return (
@@ -40,7 +38,6 @@ export default function PostPreview({ post }: PostPreviewProps) {
             <Link href="/">
               <a>Subscribe now ☺</a>
             </Link>
-            `
           </div>
         </article>
       </main>
